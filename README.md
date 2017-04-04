@@ -35,11 +35,11 @@ Sometimes there arises a situation where an elderly or disabled person becomes i
 
 #### User Stories
 
-As a **person in need**, I want to **call my emergency contact(s)** so I can **quickly get help**.
-
 As a **person in need**, I want to **send predefined message to my emergency contact(s)** so I can **get help**.
 
 As a **social networking user**, I want to **get notifications on the wearable device** so I can **stay connected with my contacts**. 
+
+As a **person in need**, I want to **call my emergency contact(s)** so I can **quickly get help**.
 
 
 #### Misuser Stories
