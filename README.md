@@ -29,7 +29,10 @@ Sometimes there arises a situation where an elderly or disabled person becomes i
 |Risk name (value)  | Impact     | Likelihood | Description | Mitigation |
 |-------------------|------------|------------|-------------|------------|
 |Bluetooth range (42) | 7 | 6 | Bluetooth has limited range, and there are different range barriers. The device should always be in the Bluetooth radius. | Cleary specify and define the Bluetooth range limitations while designing the application. |
-|Authentication (40) | 8 | 5| MetaWear device doesn't have a secure authentication mechanism. | Research ways to implement a secure authentication mechanism. |  
+|Authentication (40) | 8 | 5| MetaWear device doesn't have a secure authentication mechanism. | Research ways to implement a secure authentication mechanism. |
+|Bluetooth Sniffing (35) | 5 | 7 | Anyone with a sniffing device, such as Ubertooth, can easily listen to all the communication between BLE devices. | Implement strong pairing procedures and turn off the bluetooth when it is not necessary.| 
+|Time Limitations (20) | 5 | 4 | Time could run short if not used properly, as there is limited time. | Prioritize the tasks. |
+|Device Sensor Failure (10) | 5 | 2 | The sensors on the device are exposed and vulnerable as there is no case cover. | Get a case cover and handle with care. |   
 
 ### Application Requirements 
 
@@ -37,15 +40,51 @@ Sometimes there arises a situation where an elderly or disabled person becomes i
 
 As a **person in need**, I want to **send predefined message to my emergency contact(s)** so I can **get help**.
 
-As a **social networking user**, I want to **get notifications on the wearable device** so I can **stay connected with my contacts**. 
+Acceptance Criteria:
+  * On the push of a button, the user should be able to send an emergency text message
+  * On the shake of a wearable, the user should be able to send an emergency text message 
+
+As a **social networking user**, I want to **get notifications on the wearable device** so I can **stay connected with my contacts**.
+
+Acceptance Criteria:
+  * LED's on the MetaWear device should blink on getting sms, call, and social media notifications. 
 
 As a **person in need**, I want to **call my emergency contact(s)** so I can **quickly get help**.
 
+Acceptance Criteria:
+* On the push of a button, the user should be able to make a call to any emergency contact.
 
 #### Misuser Stories
 
 As a **malicious user**, I want to **launch a man-in-the-middle attack** on the wearable device so I can **alter and steal user’s information**.
 
+Mitigation:
+  * Use end-to-end encryption and connect to only trusted devices.
+
 As a **malicious user**, I want to **launch a denial of service attack** on the wearable device so I can **crash the device and impede the availability**.
 
+Mitigations:
+  * Set Bluetooth devices to the lowest necessary and sufficient power level so that transmissions remain within the secure perimeter of the organization.
+  * Bluetooth devices should be configured by default as undiscoverable and remain undiscoverable except as needed for pairing.
+
 As a **malicious user**, I want to **launch a spoofing attack** on the wearable device so I can **impersonate the authenticated user**.
+
+Mitigations:
+  * Connect only to trusted devices and try not to send any sensitive information.
+  * Ensure device mutual authentication is performed for all connections.
+
+### Architectural Diagram
+
+![Architectural-Diagram](Software_Component_Diagram.jpeg)
+
+* E-Notifier App
+  * ProductSearch : User searches for the available MetaWear device and makes connection to the board
+  * ContactSelection : User selects already saved emergency contacts from the phone
+  * TextSelection : User selects predefined emergency text messages from the application
+* MetaWear API
+  * Connects and controls the MetaWear board from the E-Notifier App
+* MetaWear Board
+  * Sends the push button data to the E-Notifier app
+  * Send the Accelerometer data to the E-Notifier app
+  
+  
