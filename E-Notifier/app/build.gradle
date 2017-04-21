@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.vingle.e_notifier"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -20,6 +20,8 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.mbientlab:metawear:1.8.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
