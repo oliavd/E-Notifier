@@ -75,7 +75,7 @@ Mitigations:
 
 ### Architectural Diagram
 
-![Architectural-Diagram](Software_Component_Diagram.jpeg)
+![Architectural-Diagram](Software_Component_Diagram.png)
 
 * E-Notifier App
   * ProductSearch : User searches for the available MetaWear device and makes connection to the board
