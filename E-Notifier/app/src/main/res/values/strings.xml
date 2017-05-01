@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">"E-Notifier "</string>
+
+    <string name="app_name">E-Notifier</string>
     <string name="action_connect">Connect</string>
     <string name="action_disconnect">Disconnect</string>
     <string name="action_help">Help</string>
@@ -15,20 +17,23 @@
     <string name="label_help">How To</string>
     <string name="label_settings_button">Button Message</string>
     <string name="label_settings_shake">Shake Message</string>
-
+    
     <string-array name="message_array">
-        <item>Urgent help needed!!</item>
+        <item>Help needed!!</item>
         <item>Please Help I am having a medical emergency </item>
         <item>Send assistance immediately</item>
-        <item>Help me!!</item>
-
+        <item>Shake Message Demo</item>
+        <item>Push Button Message Demo</item>
     </string-array>
-
+    
     <string name="hint_contact_name">Contact Name</string>
     <string name="text_rssi_visual">Visual interpretation of the RSSI value</string>
-    <string name="text_help"> Instructions </string>
+    <string name="text_help">1) Enter a contact name and select contact from the list of matches.  Contacts can be removed 
+        by holding the names in the selected contacts list\n2) Configure what messages you want to send in the \"Settings\" 
+        menu\n3) Connect a MetaWear board to the app\n4) Send a text message to your contacts by either pressing the 
+        onboard button or shaking the board</string>
     <string name="text_successful">Sent text to %d contacts</string>
-
+    
     <string name="error_no_contact">No contact selected</string>
     <string name="error_title">Error</string>
     <string name="error_no_bluetooth">Bluetooth device not deteted</string>
