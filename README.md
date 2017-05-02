@@ -112,7 +112,9 @@ Mitigations:
 1. A text message can be sent to your contacts by either pressing the onboard button or shaking the board
 1. Disconnect the MetaWear and Android device using the Disconnect button
 
+### Final Presentation Slides
 
+* [Slides](Final_PPT_Vaibhav_Ingle.pptx)
 
 
 
