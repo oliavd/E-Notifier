@@ -4,5 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.vingle.e_notifier.MainActivity"
+    android:background="#CEE3F6"
     tools:ignore="MergeRootFrame" />
 
