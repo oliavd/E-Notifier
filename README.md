@@ -87,4 +87,40 @@ Mitigations:
   * Sends the push button data to the E-Notifier app
   * Send the Accelerometer data to the E-Notifier app
   
+### Hardware/Software Requirements
+
+* Android 4.4+ (API Level 19 +) with Bluetooth LE capable smart phone or tablet
+* [MetaWear device](https://mbientlab.com/product/metawearr/)
+* [Android Studio](https://developer.android.com/studio/index.html)
+* [Java Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html)
+
+### Installation
+
+* Clone this repository using `git clone https://github.com/vingle1/E-Notifier.git`
+* Open this folder in Android Studio
+* In Android Studio under the Build tab: 
+  * Click on Clean Project
+  * Click on Rebuild Project
+* Run the app on targeted Android device through ADB (Android Device Bridge)
+* If you want to bypass the installation steps, you can also [directly download the app here](E-Notifier.apk) on your Android phone or computer  
+
+### Getting Started
+
+1. Connect a MetaWear board to the app 
+1. Enter a contact name and select a contact(s) from the list. Contacts can be removed by holding the names in the selected contacts list 
+1. Select the messages you want to send in the Set Messages menu 
+1. A text message can be sent to your contacts by either pressing the onboard button or shaking the board
+1. Disconnect the MetaWear and Android device using the Disconnect button
+
+
+
+
+
+
+
+
+
+
+
+  
   
